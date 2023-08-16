@@ -1,0 +1,20 @@
+FROM node:16 as build
+
+WORKDIR /home/source
+
+COPY package.json /home/source
+
+RUN npm install
+
+COPY ./ /home/source
+
+RUN npm run build
+
+
+FROM nginx:latest as mount
+
+COPY --from=build /home/source/dist /usr/share/nginx/
+
+COPY ./nginx.conf /etc/nginx/nginx.conf
+
+EXPOSE 80

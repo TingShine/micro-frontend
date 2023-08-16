@@ -1,0 +1,24 @@
+{
+  "name": "main-app",
+  "version": "1.0.0",
+  "description": "This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.",
+  "main": "index.js",
+  "dependencies": {
+    "react-router-dom": "^6.15.0",
+    "tdesign-vue": "^1.6.1",
+    "tdesign-vue-next": "^1.5.1",
+    "vite": "^4.4.5",
+    "vue": "^3.3.4",
+    "vue-router": "^4.0.13",
+    "wujie": "^1.0.18",
+    "wujie-vue3": "^1.0.18"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:main": "pnpm -filter=main-app dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
