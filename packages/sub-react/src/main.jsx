@@ -5,6 +5,8 @@ import Second from "./Second.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+import 'tdesign-react/es/style/index.css'; // 少量公共样式
+
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
   { path: "/second", element: <Second /> },

@@ -16,7 +16,9 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev:main": "pnpm -filter=main-app dev"
+    "dev:main": "pnpm -filter=main-app dev",
+    "dev:react": "pnpm -filter=sub-react dev",
+    "build:react": "pnpm -filter=sub-react dev"
   },
   "keywords": [],
   "author": "",
