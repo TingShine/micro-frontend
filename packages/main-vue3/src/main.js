@@ -15,11 +15,11 @@ window.addEventListener('message', function (event) {
   console.log('main receive', event);
 })
 
-preloadApp({
-  name: 'wujie',
-  url: window.STATIC_ENV_CONFIG?.SUB_REACT || '',
-  exec: true
-})
+// preloadApp({
+//   name: 'wujie',
+//   url: window.STATIC_ENV_CONFIG?.SUB_REACT || '',
+//   exec: true
+// })
 
 bus.$on('message', (e) => {
   console.log('main app receive ==> ', e);

@@ -7,6 +7,7 @@ import { TDesignResolver } from "unplugin-vue-components/resolvers";
 import legacy from "@vitejs/plugin-legacy";
 import { viteExternalsPlugin } from "vite-plugin-externals";
 import { createHtmlPlugin } from 'vite-plugin-html';
+import { fileURLToPath, URL } from 'url'
 
 import { externalsObj, externalsScript } from '../../scripts';
 
@@ -16,6 +17,11 @@ const isProduction = process.env?.NODE_ENV === "production"
 // https://vitejs.dev/config/
 export default defineConfig({
   base: isProduction ? "https://cdn.superting.cn/micro-frontend/main-app/" : '/micro-frontend',
+  resolve: {
+    alias: [
+      { find: '@', replacement: fileURLToPath(new URL('./src', import.meta.url)) },
+    ]
+  },
   plugins: [
     vue(),
     AutoImport({
@@ -41,6 +47,15 @@ export default defineConfig({
       }
     })
   ],
+  optimizeDeps: {
+    exclude: ['@ffmpeg/ffmpeg', '@ffmpeg/util']
+  },
+  server: {
+    headers: {
+      'Cross-Origin-Opener-Policy': 'same-origin',
+      'Cross-Origin-Embedder-Policy': 'require-corp'
+    }
+  },
   build: {
     rollupOptions: {
       plugins: [

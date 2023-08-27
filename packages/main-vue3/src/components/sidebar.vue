@@ -30,7 +30,7 @@ const list = ref([
   {
     title: 'sub-react',
     path: '/sub-react',
-    icon: 'logo-qq'
+    icon: 'logo-codesandbox'
   },
   {
     title: 'WebAssembly',

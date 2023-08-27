@@ -9,8 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@ffmpeg/ffmpeg": "^0.12.5",
-    "@ffmpeg/util": "^0.12.0",
+    "@ffmpeg/ffmpeg": "*",
+    "@ffmpeg/util": "*",
     "tdesign-vue-next": "^1.5.1",
     "vue": "^3.3.4",
     "vue-router": "^4.0.13",

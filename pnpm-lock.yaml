@@ -21,9 +21,9 @@ importers:
       '@vitejs/plugin-legacy':
         specifier: ^4.1.1
         version: registry.npmmirror.com/@vitejs/plugin-legacy@4.1.1(terser@5.19.2)(vite@4.4.5)
-      autoprefix:
-        specifier: ^1.0.1
-        version: registry.npmmirror.com/autoprefix@1.0.1
+      autoprefixer:
+        specifier: ^10.4.15
+        version: registry.npmmirror.com/autoprefixer@10.4.15(postcss@8.4.28)
       postcss:
         specifier: ^8.4.28
         version: registry.npmmirror.com/postcss@8.4.28
@@ -49,10 +49,10 @@ importers:
   packages/main-vue3:
     dependencies:
       '@ffmpeg/ffmpeg':
-        specifier: ^0.12.5
+        specifier: '*'
         version: registry.npmmirror.com/@ffmpeg/ffmpeg@0.12.5
       '@ffmpeg/util':
-        specifier: ^0.12.0
+        specifier: '*'
         version: registry.npmmirror.com/@ffmpeg/util@0.12.0
       tdesign-vue-next:
         specifier: ^1.5.1
@@ -3800,13 +3800,6 @@ packages:
     hasBin: true
     dev: true
 
-  registry.npmmirror.com/amdefine@1.0.1:
-    resolution: {integrity: sha512-S2Hw0TtNkMJhIabBwIojKL9YHO5T0n5eNqWJ7Lrlel/zDbftQpxpapi8tZs3X1HWa+u+QeydGmzzNU0m09+Rcg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/amdefine/-/amdefine-1.0.1.tgz}
-    name: amdefine
-    version: 1.0.1
-    engines: {node: '>=0.4.2'}
-    dev: true
-
   registry.npmmirror.com/ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/ansi-regex/-/ansi-regex-5.0.1.tgz}
     name: ansi-regex
@@ -3866,25 +3859,23 @@ packages:
     version: 0.4.0
     dev: false
 
-  registry.npmmirror.com/autoprefix@1.0.1:
-    resolution: {integrity: sha512-uS8sd6wq9i6B/+HY5ysWbddFkS1qEnMLxaYC8jVnNQUOo40lg7Udx5DcO1MxFfZVU6tvOKwlpDiqVrRfAjubhg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/autoprefix/-/autoprefix-1.0.1.tgz}
-    name: autoprefix
-    version: 1.0.1
+  registry.npmmirror.com/autoprefixer@10.4.15(postcss@8.4.28):
+    resolution: {integrity: sha512-KCuPB8ZCIqFdA4HwKXsvz7j6gvSDNhDP7WnUjBleRkKjPdvCmHFuQ77ocavI8FT6NdvlBnE2UFr2H4Mycn8Vew==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/autoprefixer/-/autoprefixer-10.4.15.tgz}
+    id: registry.npmmirror.com/autoprefixer/10.4.15
+    name: autoprefixer
+    version: 10.4.15
+    engines: {node: ^10 || ^12 || >=14}
+    hasBin: true
+    peerDependencies:
+      postcss: ^8.1.0
     dependencies:
-      autoprefixer-core: registry.npmmirror.com/autoprefixer-core@5.1.11
-      camelcase: registry.npmmirror.com/camelcase@1.2.1
-      decamelize: registry.npmmirror.com/decamelize@1.2.0
-    dev: true
-
-  registry.npmmirror.com/autoprefixer-core@5.1.11:
-    resolution: {integrity: sha512-9mTI2s93BpYKsYnGIQx6txi2vk24K2+BFuuoGShlk9bSaaL5Dyjm2L3ENB9O9LSGqTethEUacnoZ5aGrOeCvfg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/autoprefixer-core/-/autoprefixer-core-5.1.11.tgz}
-    name: autoprefixer-core
-    version: 5.1.11
-    dependencies:
-      browserslist: registry.npmmirror.com/browserslist@0.2.0
-      caniuse-db: registry.npmmirror.com/caniuse-db@1.0.30001524
-      num2fraction: registry.npmmirror.com/num2fraction@1.1.0
-      postcss: registry.npmmirror.com/postcss@4.0.6
+      browserslist: registry.npmmirror.com/browserslist@4.21.10
+      caniuse-lite: registry.npmmirror.com/caniuse-lite@1.0.30001521
+      fraction.js: registry.npmmirror.com/fraction.js@4.2.1
+      normalize-range: registry.npmmirror.com/normalize-range@0.1.2
+      picocolors: registry.npmmirror.com/picocolors@1.0.0
+      postcss: registry.npmmirror.com/postcss@8.4.28
+      postcss-value-parser: registry.npmmirror.com/postcss-value-parser@4.2.0
     dev: true
 
   registry.npmmirror.com/axios@1.4.0:
@@ -3989,15 +3980,6 @@ packages:
       fill-range: registry.npmmirror.com/fill-range@7.0.1
     dev: true
 
-  registry.npmmirror.com/browserslist@0.2.0:
-    resolution: {integrity: sha512-i6Sq3Sb/Li23kPHugpBK01cW+NTzifzfc2zjlhZ8NcSBoX64B513eXgcALNgEtDmfLzuVgLosLpaNUdUjkKscg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/browserslist/-/browserslist-0.2.0.tgz}
-    name: browserslist
-    version: 0.2.0
-    deprecated: Browserslist 2 could fail on reading Browserslist >3.0 config used in other tools.
-    dependencies:
-      caniuse-db: registry.npmmirror.com/caniuse-db@1.0.30001524
-    dev: true
-
   registry.npmmirror.com/browserslist@4.21.10:
     resolution: {integrity: sha512-bipEBdZfVH5/pwrvqc+Ub0kUPVfGUhlKxbvfD+z1BDnPEO/X98ruXGA1WP5ASpAFKan7Qr6j736IacbZQuAlKQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/browserslist/-/browserslist-4.21.10.tgz}
     name: browserslist
@@ -4038,19 +4020,6 @@ packages:
     name: camelcase-css
     version: 2.0.1
     engines: {node: '>= 6'}
-    dev: true
-
-  registry.npmmirror.com/camelcase@1.2.1:
-    resolution: {integrity: sha512-wzLkDa4K/mzI1OSITC+DUyjgIl/ETNHE9QvYgy6J6Jvqyyz4C0Xfd+lQhb19sX2jMpZV4IssUn0VDVmglV+s4g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/camelcase/-/camelcase-1.2.1.tgz}
-    name: camelcase
-    version: 1.2.1
-    engines: {node: '>=0.10.0'}
-    dev: true
-
-  registry.npmmirror.com/caniuse-db@1.0.30001524:
-    resolution: {integrity: sha512-+L9BC2V3vI9uBJj6mTze9Jg+b2M9xyHsLEi1QDI9g5h01dYudibmpAKrhjmY9dBe76suHA9uUEaExA2Y98BSVw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/caniuse-db/-/caniuse-db-1.0.30001524.tgz}
-    name: caniuse-db
-    version: 1.0.30001524
     dev: true
 
   registry.npmmirror.com/caniuse-lite@1.0.30001521:
@@ -4260,13 +4229,6 @@ packages:
         optional: true
     dependencies:
       ms: registry.npmmirror.com/ms@2.1.2
-    dev: true
-
-  registry.npmmirror.com/decamelize@1.2.0:
-    resolution: {integrity: sha512-z2S+W9X73hAUUki+N+9Za2lBlun89zigOyGrsax+KUQ6wKW4ZoWpEYBkGhQjwAjjDCkWxhY0VKEhk8wzY7F5cA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/decamelize/-/decamelize-1.2.0.tgz}
-    name: decamelize
-    version: 1.2.0
-    engines: {node: '>=0.10.0'}
     dev: true
 
   registry.npmmirror.com/define-lazy-prop@2.0.0:
@@ -4513,6 +4475,12 @@ packages:
       mime-types: registry.npmmirror.com/mime-types@2.1.35
     dev: false
 
+  registry.npmmirror.com/fraction.js@4.2.1:
+    resolution: {integrity: sha512-/KxoyCnPM0GwYI4NN0Iag38Tqt+od3/mLuguepLgCAKPn0ZhC544nssAW0tG2/00zXEYl9W+7hwAIpLHo6Oc7Q==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/fraction.js/-/fraction.js-4.2.1.tgz}
+    name: fraction.js
+    version: 4.2.1
+    dev: true
+
   registry.npmmirror.com/fs-extra@10.1.0:
     resolution: {integrity: sha512-oRXApq54ETRj4eMiFzGnHWGy+zo5raudjuxN0b8H7s/RU2oW0Wvsx9O0ACRN/kRq9E8Vu/ReskGB5o3ji+FzHQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/fs-extra/-/fs-extra-10.1.0.tgz}
     name: fs-extra
@@ -4749,12 +4717,6 @@ packages:
     hasBin: true
     dev: true
 
-  registry.npmmirror.com/js-base64@2.1.9:
-    resolution: {integrity: sha512-f+5mYh8iF7FlF7zgmj/yqvvYQUHI0kAxGiLjIfNxZzqJ7RQNc4sjgp8crVJw0Kzv2O6aFGZWgMTnO71I9utHSg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/js-base64/-/js-base64-2.1.9.tgz}
-    name: js-base64
-    version: 2.1.9
-    dev: true
-
   registry.npmmirror.com/js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/js-tokens/-/js-tokens-4.0.0.tgz}
     name: js-tokens
@@ -4988,18 +4950,19 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
+  registry.npmmirror.com/normalize-range@0.1.2:
+    resolution: {integrity: sha512-bdok/XvKII3nUpklnV6P2hxtMNrCboOjAcyBuQnWEhO665FwrSNRxU+AqpsyvO6LgGYPspN+lu5CLtw4jPRKNA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/normalize-range/-/normalize-range-0.1.2.tgz}
+    name: normalize-range
+    version: 0.1.2
+    engines: {node: '>=0.10.0'}
+    dev: true
+
   registry.npmmirror.com/nth-check@2.1.1:
     resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/nth-check/-/nth-check-2.1.1.tgz}
     name: nth-check
     version: 2.1.1
     dependencies:
       boolbase: registry.npmmirror.com/boolbase@1.0.0
-    dev: true
-
-  registry.npmmirror.com/num2fraction@1.1.0:
-    resolution: {integrity: sha512-xdb2PeSY7+yPt67MgXHQmK5BCMJr/v5yC90mPDlaGceMaPaS72N435F6dLFsRoiLjoJ/FPb7X6PbAU/DWvdaqw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/num2fraction/-/num2fraction-1.1.0.tgz}
-    name: num2fraction
-    version: 1.1.0
     dev: true
 
   registry.npmmirror.com/object-assign@4.1.1:
@@ -5189,15 +5152,6 @@ packages:
     resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz}
     name: postcss-value-parser
     version: 4.2.0
-    dev: true
-
-  registry.npmmirror.com/postcss@4.0.6:
-    resolution: {integrity: sha512-vi0DkoNKHmuMMFzHX6s31D3yms/jWQ1/kVQRcA39hRZVhSmscmpXDVW6dpGIxVy5wqDVkFUpWpOh/wpeCmHGCA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/postcss/-/postcss-4.0.6.tgz}
-    name: postcss
-    version: 4.0.6
-    dependencies:
-      js-base64: registry.npmmirror.com/js-base64@2.1.9
-      source-map: registry.npmmirror.com/source-map@0.2.0
     dev: true
 
   registry.npmmirror.com/postcss@8.4.27:
@@ -5400,15 +5354,6 @@ packages:
     dependencies:
       buffer-from: registry.npmmirror.com/buffer-from@1.1.2
       source-map: registry.npmmirror.com/source-map@0.6.1
-    dev: true
-
-  registry.npmmirror.com/source-map@0.2.0:
-    resolution: {integrity: sha512-CBdZ2oa/BHhS4xj5DlhjWNHcan57/5YuvfdLf17iVmIpd9KRm+DFLmC6nBNj+6Ua7Kt3TmOjDpQT1aTYOQtoUA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/source-map/-/source-map-0.2.0.tgz}
-    name: source-map
-    version: 0.2.0
-    engines: {node: '>=0.8.0'}
-    dependencies:
-      amdefine: registry.npmmirror.com/amdefine@1.0.1
     dev: true
 
   registry.npmmirror.com/source-map@0.6.1:

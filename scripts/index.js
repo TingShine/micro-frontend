@@ -44,7 +44,7 @@ hash.update(externalsStr);
 const md5 = hash.digest("hex").slice(0, 8);
 
 const cdnPath = `${protocol}://${cdnPrefix}/${mainAppName}/${subAppName}/resource-${md5}.js`;
-export const externalsScript = externalsStr
+export const externalsScript = externalsStr && process.env.NODE_ENV === "production"
   ? `<script src='${cdnPath}'></script>`
   : "";
 
