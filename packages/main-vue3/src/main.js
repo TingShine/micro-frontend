@@ -15,12 +15,9 @@ window.addEventListener('message', function (event) {
   console.log('main receive', event);
 })
 
-
-window.subReactUrl = `http://sub-react.com:32770`
-
 preloadApp({
   name: 'wujie',
-  url: window.subReactUrl,
+  url: window.STATIC_ENV_CONFIG?.SUB_REACT || '',
   exec: true
 })
 

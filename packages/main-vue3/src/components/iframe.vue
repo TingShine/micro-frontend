@@ -8,7 +8,7 @@ defineProps({
 
 const iframe = ref(null)
 
-const url = ref(window.subReactUrl)
+const url = ref(window.STATIC_ENV_CONFIG?.IFRAME_ADDRESS)
 
 const sendToIframe = throttle(() => {
   if (iframe.value) {

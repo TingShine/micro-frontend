@@ -7,8 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev:main": "pnpm -filter=main-app dev",
     "dev:react": "pnpm -filter=sub-react dev",
-    "build:react": "pnpm -filter=sub-react build",
-    "build:main": "pnpm -filter=main-app build"
+    "build:react": "pnpm -filter=sub-react build && npm run build:react",
+    "build:main": "pnpm -filter=main-app build && npm run upload:main",
+    "upload:main": "sh scripts/upload.sh main-app",
+    "upload:react": "sh scripts/upload.sh sub-react"
   },
   "keywords": [],
   "author": "",
@@ -20,7 +22,10 @@
   "devDependencies": {
     "@types/lodash": "^4.14.197",
     "@vitejs/plugin-legacy": "^4.1.1",
+    "autoprefix": "^1.0.1",
+    "postcss": "^8.4.28",
     "rollup-plugin-visualizer": "^5.9.2",
+    "tailwindcss": "^3.3.3",
     "vite": "^4.4.5",
     "vite-bundle-visualizer": "^0.10.0",
     "vite-plugin-externals": "^0.6.2",

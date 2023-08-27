@@ -10,7 +10,7 @@ import 'tdesign-react/es/style/index.css'; // 少量公共样式
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
   { path: "/second", element: <Second /> },
-]);
+], {basename: '/sub-react' });
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

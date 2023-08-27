@@ -3,7 +3,7 @@ import { ref, watchEffect } from 'vue';
 import { useRouter } from 'vue-router';
 
 // @ts-ignore
-const url = ref(window.subReactUrl)
+const url = ref(window.STATIC_ENV_CONFIG?.SUB_REACT)
 
 const router = useRouter()
 const jump = (location) => {

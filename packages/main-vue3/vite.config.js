@@ -10,11 +10,12 @@ import { createHtmlPlugin } from 'vite-plugin-html';
 
 import { externalsObj, externalsScript } from '../../scripts';
 
-console.log(externalsScript);
+// eslint-disable-next-line no-undef
+const isProduction = process.env?.NODE_ENV === "production"
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "./",
+  base: isProduction ? "https://cdn.superting.cn/micro-frontend/main-app/" : '/micro-frontend',
   plugins: [
     vue(),
     AutoImport({
@@ -34,7 +35,7 @@ export default defineConfig({
       template: 'index.html',
       inject: {
         data: {
-          title: 'Shine',
+          title: 'Micro-Frontend',
           injectScripts: externalsScript
         }
       }
