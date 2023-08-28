@@ -68,4 +68,11 @@ export default defineConfig({
       ],
     },
   },
+  experimental: {
+    renderBuiltUrl(fileName, { hostId, hostType, type }) {
+      if (fileName.includes('worker') && type === 'asset' && hostType ==='js') {
+        return `https://superting.cn/micro-frontend/` + fileName;
+      }
+    }
+  }
 });
