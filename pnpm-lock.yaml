@@ -54,6 +54,9 @@ importers:
       '@ffmpeg/util':
         specifier: '*'
         version: registry.npmmirror.com/@ffmpeg/util@0.12.0
+      tdesign-icons-vue-next:
+        specifier: ^0.2.2
+        version: registry.npmmirror.com/tdesign-icons-vue-next@0.2.2(vue@3.3.4)
       tdesign-vue-next:
         specifier: ^1.5.1
         version: 1.5.1(vue@3.3.4)
@@ -1716,15 +1719,6 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /tdesign-icons-vue-next@0.2.0(vue@3.3.4):
-    resolution: {integrity: sha512-T5M3VzplRsawyd4hFnLDAZS6xJHyJTavFdSwVXRWC1kN9BIxkxAupExbHUJWoT0fuxWjrMB7VJyxMQ8Nj5OofQ==}
-    peerDependencies:
-      vue: ^3.0.0
-    dependencies:
-      '@babel/runtime': registry.npmmirror.com/@babel/runtime@7.22.10
-      vue: 3.3.4
-    dev: false
-
   /tdesign-react@1.2.1(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-t8M9QsZV9DOSTzGP97y0muQh99dqlpSiIYTouG2bnAc1d6uDf72KC7qjeyw8KoIUFhJerhjQ8rkbCGePFdcLYg==}
     peerDependencies:
@@ -1769,7 +1763,7 @@ packages:
       lodash: registry.npmmirror.com/lodash@4.17.21
       mitt: 3.0.1
       sortablejs: 1.15.0
-      tdesign-icons-vue-next: 0.2.0(vue@3.3.4)
+      tdesign-icons-vue-next: registry.npmmirror.com/tdesign-icons-vue-next@0.2.2(vue@3.3.4)
       tinycolor2: 1.6.0
       validator: 13.11.0
       vue: 3.3.4
@@ -5484,6 +5478,18 @@ packages:
     transitivePeerDependencies:
       - ts-node
     dev: true
+
+  registry.npmmirror.com/tdesign-icons-vue-next@0.2.2(vue@3.3.4):
+    resolution: {integrity: sha512-ZKleBME7ZF1IVgnRXmIBPjfNa2Mef1nrK56f2xwn1Aa5mvXxB3fSxEzwhObR7bhzf/K42mz/Knnbll5Y7vCBjg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/tdesign-icons-vue-next/-/tdesign-icons-vue-next-0.2.2.tgz}
+    id: registry.npmmirror.com/tdesign-icons-vue-next/0.2.2
+    name: tdesign-icons-vue-next
+    version: 0.2.2
+    peerDependencies:
+      vue: ^3.0.0
+    dependencies:
+      '@babel/runtime': registry.npmmirror.com/@babel/runtime@7.22.10
+      vue: 3.3.4
+    dev: false
 
   registry.npmmirror.com/terser@5.19.2:
     resolution: {integrity: sha512-qC5+dmecKJA4cpYxRa5aVkKehYsQKc+AHeKl0Oe62aYjBL8ZA33tTljktDHJSaxxMnbI5ZYw+o/S2DxxLu8OfA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/terser/-/terser-5.19.2.tgz}

@@ -3,7 +3,7 @@
   <t-menu v-model:value="value" theme="light" style="height: 100%;">
     <t-menu-item v-for="item in list" :key="item.path" :value="item.path" @click="handleJump(item.path)">
       <template v-if="item.icon" #icon>
-        <t-icon :name="item.icon"></t-icon>
+        <component :is="item.icon" />
       </template>
       {{ item.title || '' }}
     </t-menu-item>
@@ -13,6 +13,7 @@
 <script setup lang="ts">
 import { ref, watchEffect } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
+import { DashboardIcon, LogoCodesandboxIcon, Film1Icon } from 'tdesign-icons-vue-next';
 
 const route = useRoute()
 const value = ref('/')
@@ -21,23 +22,23 @@ watchEffect(() => {
   value.value = route.path
 })
 
-const list = ref([
+const list = [
   {
     title: 'iframe',
     path: '/',
-    icon: 'dashboard'
+    icon: DashboardIcon
   },
   {
     title: 'sub-react',
     path: '/sub-react',
-    icon: 'logo-codesandbox'
+    icon: LogoCodesandboxIcon
   },
   {
     title: 'WebAssembly',
     path: '/wasm',
-    icon: 'film-1'
+    icon: Film1Icon
   }
-])
+]
 
 const router = useRouter()
 const handleJump = (pathName) => {

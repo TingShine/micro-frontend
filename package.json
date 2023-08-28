@@ -8,7 +8,7 @@
     "dev:main": "pnpm -filter=main-app dev",
     "dev:react": "pnpm -filter=sub-react dev",
     "build:react": "pnpm -filter=sub-react build && npm run build:react",
-    "build:main": "pnpm -filter=main-app build && npm run upload:main",
+    "build:main": "pnpm -filter=main-app build",
     "upload:main": "sh scripts/upload.sh main-app",
     "upload:react": "sh scripts/upload.sh sub-react"
   },
