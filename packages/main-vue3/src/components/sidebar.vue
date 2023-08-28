@@ -13,7 +13,7 @@
 <script setup lang="ts">
 import { ref, watchEffect } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
-import { DashboardIcon, LogoCodesandboxIcon, Film1Icon, SystemSettingIcon } from 'tdesign-icons-vue-next';
+import { DashboardIcon, LogoCodesandboxIcon, Film1Icon, SystemSettingIcon, MathematicsIcon } from 'tdesign-icons-vue-next';
 
 const route = useRoute()
 const value = ref('/')
@@ -39,9 +39,14 @@ const list = [
     icon: SystemSettingIcon
   },
   {
-    title: 'WebAssembly',
-    path: '/wasm',
+    title: 'FFmpeg',
+    path: '/ffmpeg',
     icon: Film1Icon
+  },
+  {
+    title: 'Rust-Wasm',
+    path: '/rust-wasm',
+    icon: MathematicsIcon
   }
 ]
 

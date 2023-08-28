@@ -15,7 +15,8 @@
     "tdesign-vue-next": "^1.5.1",
     "vue": "^3.3.4",
     "vue-router": "^4.0.13",
-    "wujie-vue3": "^1.0.18"
+    "wujie-vue3": "^1.0.18",
+    "my-rust-wasm": "file:./pkg"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",

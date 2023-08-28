@@ -7,6 +7,8 @@ import legacy from "@vitejs/plugin-legacy";
 import { viteExternalsPlugin } from "vite-plugin-externals";
 import { createHtmlPlugin } from 'vite-plugin-html';
 import { fileURLToPath, URL } from 'url'
+import wasm from 'vite-plugin-wasm'
+import topLevelAwait from 'vite-plugin-top-level-await';
 
 import { externalsObj, externalsScript } from '../../scripts';
 
@@ -23,6 +25,8 @@ export default defineConfig({
   },
   plugins: [
     vue(),
+    wasm(),
+    topLevelAwait(),
     AutoImport({
       resolvers: [TDesignResolver({ library: "vue-next" })],
     }),
@@ -56,6 +60,7 @@ export default defineConfig({
     }
   },
   build: {
+    target: 'esnext',
     rollupOptions: {
       plugins: [
         // visualizer({

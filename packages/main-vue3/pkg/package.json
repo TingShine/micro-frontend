@@ -1,0 +1,19 @@
+{
+  "name": "my-rust-wasm",
+  "collaborators": [
+    "TingShine <791405318@qq.com>"
+  ],
+  "version": "0.1.0",
+  "files": [
+    "my_rust_wasm_bg.wasm",
+    "my_rust_wasm.js",
+    "my_rust_wasm_bg.js",
+    "my_rust_wasm.d.ts"
+  ],
+  "module": "my_rust_wasm.js",
+  "types": "my_rust_wasm.d.ts",
+  "sideEffects": [
+    "./my_rust_wasm.js",
+    "./snippets/*"
+  ]
+}
