@@ -9,6 +9,7 @@ defineProps({
 const iframe = ref(null)
 
 const url = ref(window.STATIC_ENV_CONFIG?.IFRAME_ADDRESS)
+console.log(url.value);
 
 const sendToIframe = throttle(() => {
   if (iframe.value) {
@@ -18,7 +19,7 @@ const sendToIframe = throttle(() => {
 
 const getIframeHistory = throttle(() => {
   if (iframe.value) {
-    console.log(iframe.value.urlurl);
+    console.log(iframe.value.url);
   }
 }, 3000)
 </script>

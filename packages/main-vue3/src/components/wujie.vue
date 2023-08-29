@@ -1,9 +1,17 @@
 <script setup lang="ts">
-import { ref, watchEffect } from 'vue';
+import { ref, PropType } from 'vue';
 import { useRouter } from 'vue-router';
 
-// @ts-ignore
-const url = ref(window.STATIC_ENV_CONFIG?.SUB_REACT)
+defineProps({
+  url: {
+    type: String as PropType<string>,
+    default: ''
+  },
+  name: {
+    type: String as PropType<string>,
+    default: ''
+  }
+})
 
 const router = useRouter()
 const jump = (location) => {
@@ -16,7 +24,7 @@ const jump = (location) => {
   <wujie-vue
     width="100%"
     height="800px"
-    name="wujie"
+    :name="name"
     :props="{jump}"
     :url="url"
   />
