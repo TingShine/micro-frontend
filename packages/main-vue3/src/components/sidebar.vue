@@ -13,7 +13,7 @@
 <script setup lang="ts">
 import { ref, watchEffect } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
-import { DashboardIcon, LogoCodesandboxIcon, Film1Icon, SystemSettingIcon, MathematicsIcon } from 'tdesign-icons-vue-next';
+import { DashboardIcon, LogoCodesandboxIcon, Film1Icon, SystemSettingIcon, MathematicsIcon, BookOpenIcon } from 'tdesign-icons-vue-next';
 
 const route = useRoute()
 const value = ref('/')
@@ -47,6 +47,11 @@ const list = [
     title: 'Rust-Wasm',
     path: '/rust-wasm',
     icon: MathematicsIcon
+  },
+  {
+    title: 'Vue-SourceCode',
+    path: '/mini-vue3',
+    icon: BookOpenIcon
   }
 ]
 

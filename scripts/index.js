@@ -29,6 +29,12 @@ export const externalsObj = {
   "wujie-vue3": "WujieVue",
 };
 
+const suffixMap = new Map([
+  ['vue', '/dist/vue.global.min.js'],
+  ['vue-router', '/dist/vue-router.global.min.js'],
+  ['wujie-vue3', '/lib/index.min.js'],
+])
+
 const hash = crypto.createHash("md5");
 
 const externalsStr = Object.keys(externalsObj)
@@ -37,7 +43,7 @@ const externalsStr = Object.keys(externalsObj)
       dependency in subDependenciesObj
         ? subDependenciesObj[dependency]
         : mainDependenciesObj[dependency];
-    return version ? `npm/${dependency}@${version}` : null;
+    return version ? `npm/${dependency}@${version}${suffixMap.get(dependency) || ''}` : null;
   })
   .filter((dependency) => !!dependency)
   .join(",");

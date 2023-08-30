@@ -7,6 +7,7 @@ const routes = [
   { path: '/monitor', component: () => import('../views/monitor.vue' ) },
   { path: '/ffmpeg', component: () => import('../components/ffmpeg.vue' ) },
   { path: '/rust-wasm', component: () => import('../views/rust-wasm.vue' ) },
+  { path: '/mini-vue3', component: () => import('../views/mini-vue3.vue' ) },
 ]
 
 const router = createRouter({
